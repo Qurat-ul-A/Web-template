@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans:ital,wght@0,400;0,800;1,400;1,700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0;
+    text-transform: capitalize;
+    transition: all 0.5s linear;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+}
+.container{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas: 'right main';
+    grid-template-columns: 267px 1fr;
+    grid-template-rows: 1fr;
+}
+.right{
+    grid-area: right;
+    color: #fff;
+    background-color: #000;
+}
+.upper{
+    padding-top: 9%;
+    height: 40vh;
+    text-align: center;
+}
+.upper img{
+    width: 60%;
+    border: 5px double #fff;
+    border-radius: 50%;
+    padding: 2%;
+}
+.logo_icon{
+    padding-top: 9%;
+}
+.logo_icon i{
+    font-size: 25px;
+    margin: 0 1%;
+    border-radius: 50%;
+    padding: 9px;
+    background-color: #5e666b;
+}
+.icon{
+    font-size: 1.5em;
+    padding-left: 5%;
+    margin: 4% 0;
+}
+.icon li{
+    list-style: none;
+    display: inline;
+}
+.icon li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding-left: 9px;
+    letter-spacing: 1px;
+}
+.icon i{
+    border-radius: 50%;
+    padding: 9px;
+    background-color: #f0f8ff3d;
+    transition: all 1s linear;
+}
+.icon:hover i{
+    color: #000;
+    background-color: #fff;
+}
+/* _________main */
+.main{
+    grid-area: main;
+    background-image: linear-gradient(rgba(2 10 10/57%), rgba(2 10 10/20%)),
+    url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.content{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    margin-left: 5%;
+    padding-top: 6%;
+}
+.content h1{
+    font-size: 4.5em;
+}
+.content h3{
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+.close,.burger{
+    display: none;
+}
+@media only screen and (max-width:650px){
+    .container{
+        grid-template-areas: 'main';
+        grid-template-columns: 1fr;
+    }
+    .aside{
+        display: none;
+    }
+    .right{
+        position: absolute;
+        height: 100vh;
+        width: 300px;
+    }
+    .burger{
+        color: #fff;
+        font-size: 30px;
+        position: absolute;
+        left: 20px;
+        z-index: 1;
+        top: 18px;
+        display: block;
+    }
+}
+@media only screen and (max-width:350px){
+.content{
+    margin-left: 2%;
+}
+.content h1{
+    font-size: 3.2em;
+}
+.upper{
+    padding-top: 20%;
+}
+.upper img{
+    width: 50%;
+}
+.right{
+    width: 238px;
+}
+}
